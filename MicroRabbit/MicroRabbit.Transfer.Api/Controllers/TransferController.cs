@@ -9,27 +9,27 @@ using Microsoft.Extensions.Logging;
 
 namespace MicroRabbit.Transfer.Api.Controllers
 {
-    [ApiController]
-    [Route("[controller]")]
-    public class TransferController : ControllerBase
-    {
+	[ApiController]
+	[Route("api/[controller]")]
+	public class TransferController : ControllerBase
+	{
 
-        private readonly ITransferService _transferService;
+		private readonly ITransferService _transferService;
 
-        public TransferController(ITransferService transferService)
-        {
-            _transferService = transferService;
-        }
+		public TransferController(ITransferService transferService)
+		{
+			_transferService = transferService;
+		}
 
 
-        /// <summary>
-        /// Get api/transfer
-        /// </summary>
-        /// <returns></returns>
-        [HttpGet]
-        public ActionResult<IEnumerable<TransferLog>> Get()
-        {
-            return Ok(_transferService.GetTransfersLogs());
-        }
-    }
+		/// <summary>
+		/// Get api/transfer
+		/// </summary>
+		/// <returns></returns>
+		[HttpGet]
+		public ActionResult<IEnumerable<TransferLog>> Get()
+		{
+			return Ok(_transferService.GetTransfersLogs());
+		}
+	}
 }

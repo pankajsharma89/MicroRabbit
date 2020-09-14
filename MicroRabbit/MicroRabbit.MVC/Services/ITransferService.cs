@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace MicroRabbit.MVC.Services
 {
-    public interface ITransferService
-    {
-        Task Transfer(TransferDto transferDto);
-    }
+	public interface ITransferService
+	{
+		Task Transfer(TransferDto transferDto);
+	}
 }

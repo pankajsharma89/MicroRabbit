@@ -5,8 +5,8 @@ using System.Text;
 
 namespace MicroRabbit.Transfer.Application.Interfaces
 {
-    public interface ITransferService
-    {
-        IEnumerable<TransferLog> GetTransfersLogs();
-    }
+	public interface ITransferService
+	{
+		IEnumerable<TransferLog> GetTransfersLogs();
+	}
 }

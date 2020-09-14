@@ -10,31 +10,31 @@ using Microsoft.Extensions.Logging;
 
 namespace MicroRabbit.Banking.Api.Controllers
 {
-    [ApiController]
-    [Route("api/[controller]")]
-    public class BankingController : ControllerBase
-    {
+	[ApiController]
+	[Route("api/[controller]")]
+	public class BankingController : ControllerBase
+	{
 
-        private readonly IAccountService _accountService;
+		private readonly IAccountService _accountService;
 
-        public BankingController(IAccountService accountService)
-        {
-            _accountService = accountService;
-        }
+		public BankingController(IAccountService accountService)
+		{
+			_accountService = accountService;
+		}
 
-        // GET api/banking
-        [HttpGet]
-        public ActionResult<IEnumerable<Account>> Get()
-        {
-            return Ok(_accountService.GetAccounts());
-        }
+		// GET api/banking
+		[HttpGet]
+		public ActionResult<IEnumerable<Account>> Get()
+		{
+			return Ok(_accountService.GetAccounts());
+		}
 
-        [HttpPost]
-        public IActionResult Post([FromBody] AccountTransfer accountTransfer)
-        {
-            _accountService.Transfer(accountTransfer);
-            return Ok(accountTransfer);
-        }
+		[HttpPost]
+		public IActionResult Post([FromBody] AccountTransfer accountTransfer)
+		{
+			_accountService.Transfer(accountTransfer);
+			return Ok(accountTransfer);
+		}
 
-    }
+	}
 }

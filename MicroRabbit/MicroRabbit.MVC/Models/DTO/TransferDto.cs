@@ -5,10 +5,10 @@ using System.Threading.Tasks;
 
 namespace MicroRabbit.MVC.Models.DTO
 {
-    public class TransferDto
-    {
-        public int ToAccount { get; set; }
-        public int FromAccount { get; set; }
-        public decimal TransferAmount { get; set; }
-    }
+	public class TransferDto
+	{
+		public int ToAccount { get; set; }
+		public int FromAccount { get; set; }
+		public decimal TransferAmount { get; set; }
+	}
 }

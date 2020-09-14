@@ -7,13 +7,13 @@ using System.Text;
 
 namespace MicroRabbit.Transfer.Data.Context
 {
-    public class TransferDbContext:DbContext
-    {
-        public TransferDbContext(DbContextOptions options) : base(options)
-        {
+	public class TransferDbContext : DbContext
+	{
+		public TransferDbContext(DbContextOptions options) : base(options)
+		{
 
-        }
+		}
 
-        public DbSet<TransferLog> TransferLogs { get; set; }
-    }
+		public DbSet<TransferLog> TransferLogs { get; set; }
+	}
 }
